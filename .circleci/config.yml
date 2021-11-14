@@ -15,6 +15,7 @@ jobs:
           command: chmod +x mvnw
       - run:   
           command: ./mvnw -Dmaven.test.skip=true package
+          
       
 
  
