@@ -1,9 +1,7 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@4.1.0
-  
-            
+  node: circleci/node@4.1.0            
            
 jobs:
 
@@ -17,10 +15,6 @@ jobs:
           command: chmod +x mvnw
       - run:   
           command: ./mvnw -Dmaven.test.skip=true package
-      - store_artifacts:
-                path: /artifact/Demo1-0.0.1-20201016.061321-56.jar
-      - slack/status:
-                failure_message: Build Failed
-                success_message: Build Success
+      
 
  
